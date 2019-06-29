@@ -2272,8 +2272,11 @@ classes:
     is_a: gene product
     description: >-
       This is an abstract class that can be mixed in with different kinds of gene products to indicate that the gene product is intended to
-      represent a specific isoform rather than a canonical or reference or generic product. The designation of canonical or reference may be arbitrary,
-      or it may represent the superclass of all isoforms.
+      represent a specific isoform rather than a canonical or reference or generic product.
+
+      
+
+      Examples of gene product isoforms are protein isoforms in UniProtKB with identifiers ending in a dash followed by a number.
 #    entity: true
     abstract: true
 
@@ -2282,6 +2285,8 @@ classes:
     is_a: protein
     description: >-
       Represents a protein that is a specific isoform of the canonical or reference protein. See https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4114032/
+      
+      Examples of gene product isoforms are protein isoforms in UniProtKB with identifiers ending in a dash followed by a number.
     mixins:
       - gene product isoform
     id_prefixes:
