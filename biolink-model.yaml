@@ -1247,6 +1247,7 @@ slots:
       - dcterms:downloadURL
 
   distribution:
+    aliases: ['dataset']
     is_a: node property
     domain: data set version
     range: distribution level
@@ -1835,8 +1836,15 @@ classes:
   clinical modifier:
     description: >-
       Used to characterize and specify the phenotypic abnormalities defined in the Phenotypic abnormality subontology,
-      with respect to severity, laterality, age of onset, and other aspects
+      with respect to severity, laterality, and other aspects
     subclass_of: "HP:0012823"
+    is_a: attribute
+
+  clinical course:
+    description: >-
+      The course a disease typically takes from its onset, progression in time, and eventual resolution or death of
+      the affected individual
+    subclass_of: "HP:0031797"
     is_a: attribute
 
   onset:
@@ -1844,7 +1852,7 @@ classes:
       The age group in which manifestations appear
     mappings:
       - HP:0003674
-    is_a: attribute
+    is_a: clinical course
     
   inheritance:
     description: >-
@@ -1927,6 +1935,7 @@ classes:
     is_a: named thing
     mappings:
       - IAO:0000100
+      - dctypes:Dataset
 
   data set version:
     is_a: data set
@@ -2541,8 +2550,16 @@ classes:
       - UMLSSC:T203
       - UMLSST:drdd
 
-  genomic entity:
+  genotypic entity:
     is_a: molecular entity
+    aliases: ['sequence feature or set']
+    description: >-
+      A sequence feature or a set of such features. Includes sequence features not located on a genome such as gene knockdown reagents
+    mappings:
+      - GENO:0000701
+
+  genomic entity:
+    is_a: genotypic entity
     aliases: ['sequence feature']
     description: >-
       an entity that can either be directly located on a genome (gene, transcript, exon, regulatory region) or is encoded in a genome (protein)
@@ -2556,6 +2573,7 @@ classes:
       # Nucleotide Sequence
       - UMLSSC:T086
       - UMLSST:nusq
+
   genome:
     is_a: genomic entity
     description: >-
@@ -2635,6 +2653,7 @@ classes:
       - WB
       - WormBase
       - FlyBase
+      - FB
       - RGD
       - SGD
       - PomBase
@@ -2732,6 +2751,7 @@ classes:
     id_prefixes:
       - MIR
       - HGNC
+      - WormBase
 
   macromolecular complex:
     is_a: macromolecular machine
@@ -2755,7 +2775,7 @@ classes:
     is_a: molecular entity
     mappings:
       - SIO:001380
-      - "NCIT:C20130"
+      - NCIT:C20130
       - WIKIDATA:Q417841
     mixins:
       - gene grouping
@@ -2816,15 +2836,16 @@ classes:
       - WIKIDATA
       # - CIViC needs IRI mapping
       - DBSNP
+      - dbSNP
       # - MYVARIANT_HG19 needs IRI mapping
       # - MYVARIANT_HG38 needs IRI mapping
       # - HGVS needs IRI mapping
       - MGI
       - ZFIN
       - FlyBase
+      - FB
       - WB
       - WormBase
-
     alt_descriptions:
       AGR: "An enitity that describes a single affected, endogenous allele.  These can be of any type that matches that definition"
       VMC: "A contiguous change at a Location"
@@ -2843,6 +2864,22 @@ classes:
             description: ti282a allele from ZFIN
           - value: ClinVarVariant:17681
             description: NM_007294.3(BRCA1):c.2521C>T (p.Arg841Trp)
+
+  snv:
+    aliases: ['single nucleotide variant']
+    is_a: sequence variant
+    description: >-
+      SNVs are single nucleotide positions in genomic DNA at which different sequence alternatives exist
+    mappings:
+      - SO:0001483
+
+  reagent targeted gene:
+    is_a: genomic entity
+    description: >-
+       A gene altered in its expression level in the context of some experiment as a result of being
+       targeted by gene-knockdown reagent(s) such as a morpholino or RNAi
+    mappings:
+      - GENO:0000504
 
   chemical exposure:
 #    aliases: ['drug intake', 'drug dose']
