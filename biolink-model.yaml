@@ -1239,6 +1239,31 @@ slots:
     domain: source file
     mappings:
       - pav:version
+      - owl:versionInfo
+
+  license:
+    is_a: node property
+    domain: source file
+    mappings:
+      - dcterms:license
+
+  rights:
+    is_a: node property
+    domain: source file
+    mappings:
+      - dcterms:rights
+
+  format:
+    is_a: node property
+    domain: source file
+    mappings:
+      - dcterms:format
+
+  created_with:
+    is_a: node property
+    domain: source file
+    mappings:
+      - pav:createdWith
 
   downloadURL:
     is_a: node property
@@ -1253,6 +1278,7 @@ slots:
     range: distribution level
     mappings:
       - void:Dataset
+      - dctypes:Dataset
 
   type:
     is_a: node property
@@ -1301,6 +1327,11 @@ slots:
     multivalued: true
     in_subset:
       - translator_minimal
+    mappings:
+      - oboInOwl:hasExactSynonym
+      - oboInOwl:hasNarrowSynonym
+      - oboInOwl:hasBroadSynonym
+      - oboInOwl:hasRelatedSynonym
 
   category:
     is_a: node property
@@ -1325,6 +1356,7 @@ slots:
 
   description:
     is_a: node property
+    aliases: ['definition']
     domain: named thing
     range: narrative text
     description: >-
@@ -1332,12 +1364,16 @@ slots:
     in_subset:
       - translator_minimal
     slot_uri: dcterms:description
+    mappings:
+      - IAO:0000115
+      - skos:definitions
 
   systematic synonym:
     is_a: node property
     domain: named thing
     range: label type
     multivalued: true
+    slot_uri: http://purl.obolibrary.org/obo/go#systematic_synonym
     description: >-
       more commonly used for gene symbols in yeast
 
@@ -1411,8 +1447,8 @@ slots:
       translator: predicate
     slot_uri: rdf:predicate
     mappings:
-      - "owl:annotatedProperty"
-      - "OBAN:association_has_predicate"
+      - owl:annotatedProperty
+      - OBAN:association_has_predicate
 
   negated:
     is_a: association slot
@@ -1470,7 +1506,7 @@ slots:
     description: >-
       date on which thing was created. This can be applied to nodes or edges
     mappings:
-      - dcterms:created
+      - dcterms:createdOn
 
   has receptor:
     is_a: node property
