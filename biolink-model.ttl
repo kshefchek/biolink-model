@@ -9468,7 +9468,7 @@
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation rdf:Statement,
         owl:Axiom,
-        <oban:association> ;
+        OBAN:association ;
     skos:note "This is roughly the model used by biolink and ontobio at the moment" ;
     meta:class_uri <https://w3id.org/biolink/vocab/Association> ;
     meta:slots <https://w3id.org/biolink/vocab/association_id>,
@@ -9526,7 +9526,7 @@
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation rdf:predicate,
         owl:annotatedProperty,
-        <oban:association_has_predicate> ;
+        OBAN:association_has_predicate ;
     meta:domain <https://w3id.org/biolink/vocab/Association> ;
     meta:is_a <https://w3id.org/biolink/vocab/association_slot> ;
     meta:local_names [ a meta:LocalName ;
@@ -9742,7 +9742,7 @@
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation rdf:object,
         owl:annotatedTarget,
-        <oban:association_has_object> ;
+        OBAN:association_has_object ;
     meta:domain <https://w3id.org/biolink/vocab/Association> ;
     meta:is_a <https://w3id.org/biolink/vocab/association_slot> ;
     meta:local_names [ a meta:LocalName ;
@@ -9857,7 +9857,7 @@
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation rdf:subject,
         owl:annotatedSource,
-        <oban:association_has_subject> ;
+        OBAN:association_has_subject ;
     meta:domain <https://w3id.org/biolink/vocab/Association> ;
     meta:is_a <https://w3id.org/biolink/vocab/association_slot> ;
     meta:local_names [ a meta:LocalName ;
