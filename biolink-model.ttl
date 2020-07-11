@@ -13,194 +13,193 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#>
-@prefix dctypes: <http://purl.org/dc/dcmitype/>
-@prefix cito: <http://purl.org/spar/cito/>
-@prefix void: <http://rdfs.org/ns/void#>
-@prefix AQTLTrait: <http://identifiers.org/animalqtltrait/>
-@prefix BFO: <http://purl.obolibrary.org/obo/BFO_>
-@prefix COHD: <http://purl.obolibrary.org/obo/COHD_>
-@prefix CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-@prefix CHR: <http://purl.obolibrary.org/obo/CHR_>
-@prefix CL: <http://purl.obolibrary.org/obo/CL_>
-@prefix CLO: <http://purl.obolibrary.org/obo/CLO_>
-@prefix CMO: <http://purl.obolibrary.org/obo/CMO_>
-@prefix EDAM-DATA: <http://edamontology.org/data_>
-@prefix DC_CL: <http://purl.obolibrary.org/obo/DC_CL>
-@prefix DECIPHER: <https://decipher.sanger.ac.uk/syndrome/>
-@prefix DOID: <http://purl.obolibrary.org/obo/DOID_>
-@prefix ECO: <http://purl.obolibrary.org/obo/ECO_>
-@prefix EFO: <http://www.ebi.ac.uk/efo/EFO_>
-@prefix ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-@prefix ERO: <http://purl.obolibrary.org/obo/ERO_>
-@prefix faldo: <http://biohackathon.org/resource/faldo#>
-@prefix FBcv: <http://purl.obolibrary.org/obo/FBcv_>
-@prefix FBbt: <http://purl.obolibrary.org/obo/FBbt_>
-@prefix FBdv: <http://purl.obolibrary.org/obo/FBdv_>
-@prefix GARD: <http://purl.obolibrary.org/obo/GARD_>
-@prefix GENO: <http://purl.obolibrary.org/obo/GENO_>
-@prefix GO: <http://purl.obolibrary.org/obo/GO_>
-@prefix HP: <http://purl.obolibrary.org/obo/HP_>
-@prefix IAO: <http://purl.obolibrary.org/obo/IAO_>
-@prefix ICD9: <http://purl.obolibrary.org/obo/ICD9_>
-@prefix KEGG-ds: <http://purl.obolibrary.org/KEGG-ds_>
-@prefix LPT: <http://purl.obolibrary.org/obo/LPT_>
-@prefix MA: <http://purl.obolibrary.org/obo/MA_>
-@prefix MedGen: <http://www.ncbi.nlm.nih.gov/medgen/>
-@prefix MESH: <http://id.nlm.nih.gov/mesh/>
-@prefix MP: <http://purl.obolibrary.org/obo/MP_>
-@prefix MPATH: <http://purl.obolibrary.org/obo/MPATH_>
-@prefix NBO: <http://purl.obolibrary.org/obo/NBO_>
-@prefix OBA: <http://purl.obolibrary.org/obo/OBA_>
-@prefix OBAN: <http://purl.org/oban/>
-@prefix OBI: <http://purl.obolibrary.org/obo/OBI_>
-@prefix OBO: <http://purl.obolibrary.org/obo/>
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-@prefix OMIA: <https://omia.org/OMIA>
-@prefix OMIM: <http://omim.org/entry/>
-@prefix OMIMPS: <http://www.omim.org/phenotypicSeries/>
-@prefix ORPHA: <http://www.orpha.net/ORDO/Orphanet_>
-@prefix PATO: <http://purl.obolibrary.org/obo/PATO_>
-@prefix PCO: <http://purl.obolibrary.org/obo/PCO_>
-@prefix PR: <http://purl.obolibrary.org/obo/PR_>
-@prefix PW: <http://purl.obolibrary.org/obo/PW_>
-@prefix RO: <http://purl.obolibrary.org/obo/RO_>
-@prefix SCTID: <http://purl.obolibrary.org/obo/SCTID_>
-@prefix SIO: <http://semanticscience.org/resource/SIO_>
-@prefix SNOMED: <http://purl.obolibrary.org/obo/SNOMED_>
-@prefix SO: <http://purl.obolibrary.org/obo/SO_>
-@prefix STATO: <http://purl.obolibrary.org/obo/STATO_>
-@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-@prefix UPHENO: <http://purl.obolibrary.org/obo/UPHENO_>
-@prefix UMLS: <http://linkedlifedata.com/resource/umls/id/>
-@prefix UO: <http://purl.obolibrary.org/obo/UO_>
-@prefix VT: <http://purl.obolibrary.org/obo/VT_>
-@prefix WBPhenotype: <http://purl.obolibrary.org/obo/WBPhenotype_>
-@prefix XCO: <http://purl.obolibrary.org/obo/XCO_>
-@prefix ZFA: <http://purl.obolibrary.org/obo/ZFA_>
-@prefix ZFS: <http://purl.obolibrary.org/obo/ZFS_>
-@prefix ZP: <http://purl.obolibrary.org/obo/ZP_>
-@prefix WBbt: <http://purl.obolibrary.org/obo/WBbt_>
-@prefix EMAPA: <http://purl.obolibrary.org/obo/EMAPA_>
-@prefix XAO: <http://purl.obolibrary.org/obo/XAO_>
-@prefix MONDO: <http://purl.obolibrary.org/obo/MONDO_>
-@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-@prefix SEPIO: <http://purl.obolibrary.org/obo/SEPIO_>
-@prefix VIVO: <http://vivoweb.org/ontology/core#>
-@prefix vfb: <http://virtualflybrain.org/reports/>
-@prefix EOM: <https://elementsofmorphology.nih.gov/index.cgi?tid=>
-@prefix EOM_IMG: <https://elementsofmorphology.nih.gov/images/terms/>
-@prefix DOI: <http://dx.doi.org/>
-@prefix GeneReviews: <http://www.ncbi.nlm.nih.gov/books/>
-@prefix ISBN: <https://monarchinitiative.org/ISBN_>
-@prefix ISBN-10: <https://monarchinitiative.org/ISBN10_>
-@prefix ISBN-13: <https://monarchinitiative.org/ISBN13_>
-@prefix J: <http://www.informatics.jax.org/reference/J:>
-@prefix MPD: <https://phenome.jax.org/>
-@prefix MPD-assay: <https://phenome.jax.org/db/qp?rtn=views/catlines&keymeas=>
-@prefix PMID: <http://www.ncbi.nlm.nih.gov/pubmed/>
-@prefix PMCID: <http://www.ncbi.nlm.nih.gov/pmc/>
-@prefix AspGD_REF: <http://www.aspergillusgenome.org/cgi-bin/reference/reference.pl?dbid=>
-@prefix AQTLPub: <https://www.animalgenome.org/cgi-bin/QTLdb/BT/qabstract?PUBMED_ID=>
-@prefix GO_REF: <http://www.geneontology.org/cgi-bin/references.cgi#GO_REF:>
-@prefix PAINT_REF: <http://www.geneontology.org/gene-associations/submission/paint/>
-@prefix HPO: <http://human-phenotype-ontology.org/>
-@prefix APO: <http://purl.obolibrary.org/obo/APO_>
-@prefix APB: <http://pb.apf.edu.au/phenbank/strain.html?id=>
-@prefix CMMR: <http://www.cmmr.ca/order.php?t=m&id=>
-@prefix Coriell: <https://catalog.coriell.org/0/Sections/Search/Sample_Detail.aspx?Ref=>
-@prefix CoriellCollection: <https://catalog.coriell.org/1/>
-@prefix CoriellFamily: <https://catalog.coriell.org/0/Sections/BrowseCatalog/FamilyTypeSubDetail.aspx?fam=>
-@prefix CoriellIndividual: <https://catalog.coriell.org/Search?q=>
-@prefix dbSNPIndividual: <http://www.ncbi.nlm.nih.gov/SNP/snp_ind.cgi?ind_id=>
-@prefix EMMA: <https://www.infrafrontier.eu/search?keyword=EM:>
-@prefix JAX: <http://jaxmice.jax.org/strain/>
-@prefix MMRRC: <https://www.mmrrc.org/catalog/sds.php?mmrrc_id=>
-@prefix MPD-strain: <http://phenome.jax.org/db/q?rtn=strains/details&strainid=>
-@prefix MUGEN: <http://bioit.fleming.gr/mugen/Controller?workflow=ViewModel&expand_all=true&name_begins=model.block&eid=>
-@prefix NCIMR: <https://mouse.ncifcrf.gov/available_details.asp?ID=>
-@prefix RBRC: <http://www2.brc.riken.jp/lab/animal/detail.php?brc_no=>
-@prefix NCBIAssembly: <https://www.ncbi.nlm.nih.gov/assembly?term=>
-@prefix NCBIGenome: <https://www.ncbi.nlm.nih.gov/genome/>
-@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-@prefix OMIA-breed: <https://monarchinitiative.org/model/OMIA-breed:>
-@prefix UCSCBuild: <http://genome.ucsc.edu/cgi-bin/hgGateway?db=>
-@prefix HOMOLOGENE: <http://www.ncbi.nlm.nih.gov/homologene/>
-@prefix KEGG-ko: <http://www.kegg.jp/dbget-bin/www_bget?ko:>
-@prefix PANTHER: <http://www.pantherdb.org/panther/family.do?clsAccession=>
-@prefix horseQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/EC/qdetails?QTL_ID=>
-@prefix cattleQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/BT/qdetails?QTL_ID=>
-@prefix catfishQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/IP/qdetails?QTL_ID=>
-@prefix chickenQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/GG/qdetails?QTL_ID=>
-@prefix pigQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/SS/qdetails?QTL_ID=>
-@prefix rainbow_troutQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/OM/qdetails?QTL_ID=>
-@prefix sheepQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/OA/qdetails?QTL_ID=>
-@prefix BGD: <http://bovinegenome.org/genepages/btau40/genes/>
-@prefix ClinVar: <http://www.ncbi.nlm.nih.gov/clinvar/>
-@prefix ClinVarVariant: <http://www.ncbi.nlm.nih.gov/clinvar/variation/>
-@prefix ClinVarSubmitters: <http://www.ncbi.nlm.nih.gov/clinvar/submitters/>
-@prefix COSMIC: <http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=>
-@prefix HGMD: <http://www.hgmd.cf.ac.uk/ac/gene.php?gene=>
-@prefix dbSNP: <http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=>
-@prefix dbVar: <http://www.ncbi.nlm.nih.gov/dbvar/>
-@prefix GWAS: <https://www.ebi.ac.uk/gwas/variants/>
-@prefix KEGG-path: <http://www.kegg.jp/dbget-bin/www_bget?path:>
-@prefix KEGG-img: <http://www.genome.jp/kegg/pathway/map/>
-@prefix REACT: <http://www.reactome.org/PathwayBrowser/#/>
-@prefix SMPDB: <http://smpdb.ca/view/>
-@prefix AspGD: <http://www.aspergillusgenome.org/cgi-bin/locus.pl?dbid=>
-@prefix BIOGRID: <http://thebiogrid.org/>
-@prefix CCDS: <http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi?REQUEST=CCDS&DATA=>
-@prefix CGNC: <http://birdgenenames.org/cgnc/GeneReport?id=>
-@prefix dictyBase: <http://dictybase.org/gene/>
-@prefix EcoGene: <http://ecogene.org/gene/>
-@prefix ENSEMBL: <http://ensembl.org/id/>
-@prefix EnsemblGenome: <http://www.ensemblgenomes.org/id/>
-@prefix FlyBase: <http://flybase.org/reports/>
-@prefix Genatlas: <http://genatlas.medecine.univ-paris5.fr/fiche.php?symbol=>
-@prefix GenBank: <http://www.ncbi.nlm.nih.gov/nuccore/>
-@prefix HGNC: <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:>
-@prefix IMPC: <https://www.mousephenotype.org/data/genes/>
-@prefix IMPC-pipe: <https://www.mousephenotype.org/impress/PipelineInfo?id=>
-@prefix IMPC-proc: <https://www.mousephenotype.org/impress/ProcedureInfo?action=list&procID=>
-@prefix IMPC-param: <https://www.mousephenotype.org/impress/OntologyInfo?action=list&procID=>
-@prefix KEGG-hsa: <http://www.kegg.jp/dbget-bin/www_bget?hsa:>
-@prefix MGI: <http://www.informatics.jax.org/accession/MGI:>
-@prefix miRBase: <http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=>
-@prefix NCBIGene: <https://www.ncbi.nlm.nih.gov/gene/>
-@prefix PomBase: <https://www.pombase.org/spombe/result/>
-@prefix RefSeq: <http://www.ncbi.nlm.nih.gov/refseq/?term=>
-@prefix RGD: <http://rgd.mcw.edu/rgdweb/report/gene/main.html?id=>
-@prefix RGDRef: <http://rgd.mcw.edu/rgdweb/report/reference/main.html?id=>
-@prefix SGD: <https://www.yeastgenome.org/locus/>
-@prefix SGD_REF: <https://www.yeastgenome.org/reference/>
-@prefix TAIR: <https://www.arabidopsis.org/servlets/TairObject?type=locus&id=>
-@prefix VGNC: <https://vertebrate.genenames.org/data/gene-symbol-report/#!/vgnc_id/>
-@prefix WormBase: <https://www.wormbase.org/get?name=>
-@prefix Xenbase: <http://www.xenbase.org/gene/showgene.do?method=display&geneId=>
-@prefix ZFIN: <http://zfin.org/>
-@prefix ComplexPortal: <https://www.ebi.ac.uk/complexportal/complex/>
-@prefix EC: <https://www.enzyme-database.org/query.php?ec=>
-@prefix HPRD: <http://www.hprd.org/protein/>
-@prefix NCBIProtein: <http://www.ncbi.nlm.nih.gov/protein/>
-@prefix PDB: <http://www.ebi.ac.uk/pdbsum/>
-@prefix SwissProt: <http://identifiers.org/SwissProt:>
-@prefix TrEMBL: <http://purl.uniprot.org/uniprot/>
-@prefix UniProtKB: <http://identifiers.org/uniprot/>
-@prefix IUPHAR: <http://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=>
-@prefix CID: <http://pubchem.ncbi.nlm.nih.gov/compound/>
-@prefix DrugBank: <http://www.drugbank.ca/drugs/>
-@prefix OAE: <http://purl.obolibrary.org/obo/OAE_>
-@prefix RXCUI: <http://purl.bioontology.org/ontology/RXNORM/>
-@prefix MEDDRA: <http://purl.bioontology.org/ontology/MEDDRA/>
-@prefix FDADrug: <http://www.fda.gov/Drugs/InformationOnDrugs/>
-@prefix BT: <http://c.biothings.io/#>
-@prefix UNII: <http://fdasis.nlm.nih.gov/srs/unii/>
-@prefix GINAS: <http://tripod.nih.gov/ginas/app/substance#>
-@prefix HMDB: <http://www.hmdb.ca/metabolites/>
-@prefix WD_Prop: <https://www.wikidata.org/wiki/Property:>
-@prefix WIKIDATA: <https://www.wikidata.org/wiki/>
-
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix AQTLTrait: <http://identifiers.org/animalqtltrait/> .
+@prefix BFO: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix COHD: <http://purl.obolibrary.org/obo/COHD_> .
+@prefix CHEBI: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix CHR: <http://purl.obolibrary.org/obo/CHR_> .
+@prefix CL: <http://purl.obolibrary.org/obo/CL_> .
+@prefix CLO: <http://purl.obolibrary.org/obo/CLO_> .
+@prefix CMO: <http://purl.obolibrary.org/obo/CMO_> .
+@prefix EDAM-DATA: <http://edamontology.org/data_> .
+@prefix DC_CL: <http://purl.obolibrary.org/obo/DC_CL> .
+@prefix DECIPHER: <https://decipher.sanger.ac.uk/syndrome/> .
+@prefix DOID: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix ECO: <http://purl.obolibrary.org/obo/ECO_> .
+@prefix EFO: <http://www.ebi.ac.uk/efo/EFO_> .
+@prefix ENVO: <http://purl.obolibrary.org/obo/ENVO_> .
+@prefix ERO: <http://purl.obolibrary.org/obo/ERO_> .
+@prefix faldo: <http://biohackathon.org/resource/faldo#> .
+@prefix FBcv: <http://purl.obolibrary.org/obo/FBcv_> .
+@prefix FBbt: <http://purl.obolibrary.org/obo/FBbt_> .
+@prefix FBdv: <http://purl.obolibrary.org/obo/FBdv_> .
+@prefix GARD: <http://purl.obolibrary.org/obo/GARD_> .
+@prefix GENO: <http://purl.obolibrary.org/obo/GENO_> .
+@prefix GO: <http://purl.obolibrary.org/obo/GO_> .
+@prefix HP: <http://purl.obolibrary.org/obo/HP_> .
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix ICD9: <http://purl.obolibrary.org/obo/ICD9_> .
+@prefix KEGG-ds: <http://purl.obolibrary.org/KEGG-ds_> .
+@prefix LPT: <http://purl.obolibrary.org/obo/LPT_> .
+@prefix MA: <http://purl.obolibrary.org/obo/MA_> .
+@prefix MedGen: <http://www.ncbi.nlm.nih.gov/medgen/> .
+@prefix MESH: <http://id.nlm.nih.gov/mesh/> .
+@prefix MP: <http://purl.obolibrary.org/obo/MP_> .
+@prefix MPATH: <http://purl.obolibrary.org/obo/MPATH_> .
+@prefix NBO: <http://purl.obolibrary.org/obo/NBO_> .
+@prefix OBA: <http://purl.obolibrary.org/obo/OBA_> .
+@prefix OBAN: <http://purl.org/oban/> .
+@prefix OBI: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix OBO: <http://purl.obolibrary.org/obo/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OMIA: <https://omia.org/OMIA> .
+@prefix OMIM: <http://omim.org/entry/> .
+@prefix OMIMPS: <http://www.omim.org/phenotypicSeries/> .
+@prefix ORPHA: <http://www.orpha.net/ORDO/Orphanet_> .
+@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix PCO: <http://purl.obolibrary.org/obo/PCO_> .
+@prefix PR: <http://purl.obolibrary.org/obo/PR_> .
+@prefix PW: <http://purl.obolibrary.org/obo/PW_> .
+@prefix RO: <http://purl.obolibrary.org/obo/RO_> .
+@prefix SCTID: <http://purl.obolibrary.org/obo/SCTID_> .
+@prefix SIO: <http://semanticscience.org/resource/SIO_> .
+@prefix SNOMED: <http://purl.obolibrary.org/obo/SNOMED_> .
+@prefix SO: <http://purl.obolibrary.org/obo/SO_> .
+@prefix STATO: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
+@prefix UPHENO: <http://purl.obolibrary.org/obo/UPHENO_> .
+@prefix UMLS: <http://linkedlifedata.com/resource/umls/id/> .
+@prefix UO: <http://purl.obolibrary.org/obo/UO_> .
+@prefix VT: <http://purl.obolibrary.org/obo/VT_> .
+@prefix WBPhenotype: <http://purl.obolibrary.org/obo/WBPhenotype_> .
+@prefix XCO: <http://purl.obolibrary.org/obo/XCO_> .
+@prefix ZFA: <http://purl.obolibrary.org/obo/ZFA_> .
+@prefix ZFS: <http://purl.obolibrary.org/obo/ZFS_> .
+@prefix ZP: <http://purl.obolibrary.org/obo/ZP_> .
+@prefix WBbt: <http://purl.obolibrary.org/obo/WBbt_> .
+@prefix EMAPA: <http://purl.obolibrary.org/obo/EMAPA_> .
+@prefix XAO: <http://purl.obolibrary.org/obo/XAO_> .
+@prefix MONDO: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
+@prefix SEPIO: <http://purl.obolibrary.org/obo/SEPIO_> .
+@prefix VIVO: <http://vivoweb.org/ontology/core#> .
+@prefix vfb: <http://virtualflybrain.org/reports/> .
+@prefix EOM: <https://elementsofmorphology.nih.gov/index.cgi?tid=> .
+@prefix EOM_IMG: <https://elementsofmorphology.nih.gov/images/terms/> .
+@prefix DOI: <http://dx.doi.org/> .
+@prefix GeneReviews: <http://www.ncbi.nlm.nih.gov/books/> .
+@prefix ISBN: <https://monarchinitiative.org/ISBN_> .
+@prefix ISBN-10: <https://monarchinitiative.org/ISBN10_> .
+@prefix ISBN-13: <https://monarchinitiative.org/ISBN13_> .
+@prefix J: <http://www.informatics.jax.org/reference/J:> .
+@prefix MPD: <https://phenome.jax.org/> .
+@prefix MPD-assay: <https://phenome.jax.org/db/qp?rtn=views/catlines&keymeas=> .
+@prefix PMID: <http://www.ncbi.nlm.nih.gov/pubmed/> .
+@prefix PMCID: <http://www.ncbi.nlm.nih.gov/pmc/> .
+@prefix AspGD_REF: <http://www.aspergillusgenome.org/cgi-bin/reference/reference.pl?dbid=> .
+@prefix AQTLPub: <https://www.animalgenome.org/cgi-bin/QTLdb/BT/qabstract?PUBMED_ID=> .
+@prefix GO_REF: <http://www.geneontology.org/cgi-bin/references.cgi#GO_REF:> .
+@prefix PAINT_REF: <http://www.geneontology.org/gene-associations/submission/paint/> .
+@prefix HPO: <http://human-phenotype-ontology.org/> .
+@prefix APO: <http://purl.obolibrary.org/obo/APO_> .
+@prefix APB: <http://pb.apf.edu.au/phenbank/strain.html?id=> .
+@prefix CMMR: <http://www.cmmr.ca/order.php?t=m&id=> .
+@prefix Coriell: <https://catalog.coriell.org/0/Sections/Search/Sample_Detail.aspx?Ref=> .
+@prefix CoriellCollection: <https://catalog.coriell.org/1/> .
+@prefix CoriellFamily: <https://catalog.coriell.org/0/Sections/BrowseCatalog/FamilyTypeSubDetail.aspx?fam=> .
+@prefix CoriellIndividual: <https://catalog.coriell.org/Search?q=> .
+@prefix dbSNPIndividual: <http://www.ncbi.nlm.nih.gov/SNP/snp_ind.cgi?ind_id=> .
+@prefix EMMA: <https://www.infrafrontier.eu/search?keyword=EM:> .
+@prefix JAX: <http://jaxmice.jax.org/strain/> .
+@prefix MMRRC: <https://www.mmrrc.org/catalog/sds.php?mmrrc_id=> .
+@prefix MPD-strain: <http://phenome.jax.org/db/q?rtn=strains/details&strainid=> .
+@prefix MUGEN: <http://bioit.fleming.gr/mugen/Controller?workflow=ViewModel&expand_all=true&name_begins=model.block&eid=> .
+@prefix NCIMR: <https://mouse.ncifcrf.gov/available_details.asp?ID=> .
+@prefix RBRC: <http://www2.brc.riken.jp/lab/animal/detail.php?brc_no=> .
+@prefix NCBIAssembly: <https://www.ncbi.nlm.nih.gov/assembly?term=> .
+@prefix NCBIGenome: <https://www.ncbi.nlm.nih.gov/genome/> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_> .
+@prefix OMIA-breed: <https://monarchinitiative.org/model/OMIA-breed:> .
+@prefix UCSCBuild: <http://genome.ucsc.edu/cgi-bin/hgGateway?db=> .
+@prefix HOMOLOGENE: <http://www.ncbi.nlm.nih.gov/homologene/> .
+@prefix KEGG-ko: <http://www.kegg.jp/dbget-bin/www_bget?ko:> .
+@prefix PANTHER: <http://www.pantherdb.org/panther/family.do?clsAccession=> .
+@prefix horseQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/EC/qdetails?QTL_ID=> .
+@prefix cattleQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/BT/qdetails?QTL_ID=> .
+@prefix catfishQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/IP/qdetails?QTL_ID=> .
+@prefix chickenQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/GG/qdetails?QTL_ID=> .
+@prefix pigQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/SS/qdetails?QTL_ID=> .
+@prefix rainbow_troutQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/OM/qdetails?QTL_ID=> .
+@prefix sheepQTL: <https://www.animalgenome.org/cgi-bin/QTLdb/OA/qdetails?QTL_ID=> .
+@prefix BGD: <http://bovinegenome.org/genepages/btau40/genes/> .
+@prefix ClinVar: <http://www.ncbi.nlm.nih.gov/clinvar/> .
+@prefix ClinVarVariant: <http://www.ncbi.nlm.nih.gov/clinvar/variation/> .
+@prefix ClinVarSubmitters: <http://www.ncbi.nlm.nih.gov/clinvar/submitters/> .
+@prefix COSMIC: <http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=> .
+@prefix HGMD: <http://www.hgmd.cf.ac.uk/ac/gene.php?gene=> .
+@prefix dbSNP: <http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=> .
+@prefix dbVar: <http://www.ncbi.nlm.nih.gov/dbvar/> .
+@prefix GWAS: <https://www.ebi.ac.uk/gwas/variants/> .
+@prefix KEGG-path: <http://www.kegg.jp/dbget-bin/www_bget?path:> .
+@prefix KEGG-img: <http://www.genome.jp/kegg/pathway/map/> .
+@prefix REACT: <http://www.reactome.org/PathwayBrowser/#/> .
+@prefix SMPDB: <http://smpdb.ca/view/> .
+@prefix AspGD: <http://www.aspergillusgenome.org/cgi-bin/locus.pl?dbid=> .
+@prefix BIOGRID: <http://thebiogrid.org/> .
+@prefix CCDS: <http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi?REQUEST=CCDS&DATA=> .
+@prefix CGNC: <http://birdgenenames.org/cgnc/GeneReport?id=> .
+@prefix dictyBase: <http://dictybase.org/gene/> .
+@prefix EcoGene: <http://ecogene.org/gene/> .
+@prefix ENSEMBL: <http://ensembl.org/id/> .
+@prefix EnsemblGenome: <http://www.ensemblgenomes.org/id/> .
+@prefix FlyBase: <http://flybase.org/reports/> .
+@prefix Genatlas: <http://genatlas.medecine.univ-paris5.fr/fiche.php?symbol=> .
+@prefix GenBank: <http://www.ncbi.nlm.nih.gov/nuccore/> .
+@prefix HGNC: <https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:> .
+@prefix IMPC: <https://www.mousephenotype.org/data/genes/> .
+@prefix IMPC-pipe: <https://www.mousephenotype.org/impress/PipelineInfo?id=> .
+@prefix IMPC-proc: <https://www.mousephenotype.org/impress/ProcedureInfo?action=list&procID=> .
+@prefix IMPC-param: <https://www.mousephenotype.org/impress/OntologyInfo?action=list&procID=> .
+@prefix KEGG-hsa: <http://www.kegg.jp/dbget-bin/www_bget?hsa:> .
+@prefix MGI: <http://www.informatics.jax.org/accession/MGI:> .
+@prefix miRBase: <http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=> .
+@prefix NCBIGene: <https://www.ncbi.nlm.nih.gov/gene/> .
+@prefix PomBase: <https://www.pombase.org/spombe/result/> .
+@prefix RefSeq: <http://www.ncbi.nlm.nih.gov/refseq/?term=> .
+@prefix RGD: <http://rgd.mcw.edu/rgdweb/report/gene/main.html?id=> .
+@prefix RGDRef: <http://rgd.mcw.edu/rgdweb/report/reference/main.html?id=> .
+@prefix SGD: <https://www.yeastgenome.org/locus/> .
+@prefix SGD_REF: <https://www.yeastgenome.org/reference/> .
+@prefix TAIR: <https://www.arabidopsis.org/servlets/TairObject?type=locus&id=> .
+@prefix VGNC: <https://vertebrate.genenames.org/data/gene-symbol-report/#!/vgnc_id/> .
+@prefix WormBase: <https://www.wormbase.org/get?name=> .
+@prefix Xenbase: <http://www.xenbase.org/gene/showgene.do?method=display&geneId=> .
+@prefix ZFIN: <http://zfin.org/> .
+@prefix ComplexPortal: <https://www.ebi.ac.uk/complexportal/complex/> .
+@prefix EC: <https://www.enzyme-database.org/query.php?ec=> .
+@prefix HPRD: <http://www.hprd.org/protein/> .
+@prefix NCBIProtein: <http://www.ncbi.nlm.nih.gov/protein/> .
+@prefix PDB: <http://www.ebi.ac.uk/pdbsum/> .
+@prefix SwissProt: <http://identifiers.org/SwissProt:> .
+@prefix TrEMBL: <http://purl.uniprot.org/uniprot/> .
+@prefix UniProtKB: <http://identifiers.org/uniprot/> .
+@prefix IUPHAR: <http://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=> .
+@prefix CID: <http://pubchem.ncbi.nlm.nih.gov/compound/> .
+@prefix DrugBank: <http://www.drugbank.ca/drugs/> .
+@prefix OAE: <http://purl.obolibrary.org/obo/OAE_> .
+@prefix RXCUI: <http://purl.bioontology.org/ontology/RXNORM/> .
+@prefix MEDDRA: <http://purl.bioontology.org/ontology/MEDDRA/> .
+@prefix FDADrug: <http://www.fda.gov/Drugs/InformationOnDrugs/> .
+@prefix BT: <http://c.biothings.io/#> .
+@prefix UNII: <http://fdasis.nlm.nih.gov/srs/unii/> .
+@prefix GINAS: <http://tripod.nih.gov/ginas/app/substance#> .
+@prefix HMDB: <http://www.hmdb.ca/metabolites/> .
+@prefix WD_Prop: <https://www.wikidata.org/wiki/Property:> .
+@prefix WIKIDATA: <https://www.wikidata.org/wiki/> .
 
 
 
