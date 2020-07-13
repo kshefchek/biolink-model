@@ -7290,7 +7290,8 @@
 <https://w3id.org/biolink/vocab/OrganismalEntity> a meta:ClassDefinition ;
     skos:definition "A named entity that is either a part of an organism, a whole organism, population or clade of organisms, excluding molecular entities" ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
-    skos:mappingRelation <wikidata:Q7239> ;
+    skos:mappingRelation <wikidata:Q7239>,
+        NCBITaxon:1 ;
     meta:abstract true ;
     meta:class_uri <https://w3id.org/biolink/vocab/OrganismalEntity> ;
     meta:is_a <https://w3id.org/biolink/vocab/BiologicalEntity> ;
