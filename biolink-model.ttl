@@ -302,7 +302,6 @@
         <https://w3id.org/biolink/vocab/GenotypeToPhenotypicFeatureAssociation>,
         <https://w3id.org/biolink/vocab/GenotypeToThingAssociation>,
         <https://w3id.org/biolink/vocab/GenotypeToVariantAssociation>,
-        <https://w3id.org/biolink/vocab/GenotypicEntity>,
         <https://w3id.org/biolink/vocab/GenotypicSex>,
         <https://w3id.org/biolink/vocab/GeographicLocation>,
         <https://w3id.org/biolink/vocab/GeographicLocationAtTime>,
@@ -3583,79 +3582,6 @@
     meta:abstract true ;
     meta:class_uri <https://w3id.org/biolink/vocab/GeneGrouping> ;
     meta:mixin true .
-
-<https://w3id.org/biolink/vocab/GenotypicEntity> a meta:ClassDefinition ;
-    skos:altLabel "sequence feature or set" ;
-    skos:definition "A sequence feature or a set of such features. Includes sequence features not located on a genome such as gene knockdown reagents" ;
-    skos:inScheme <https://w3id.org/biolink/biolink-model> ;
-    skos:mappingRelation GENO:0000701 ;
-    meta:class_uri <https://w3id.org/biolink/vocab/GenotypicEntity> ;
-    meta:is_a <https://w3id.org/biolink/vocab/MolecularEntity> ;
-    meta:slots <https://w3id.org/biolink/vocab/affects_abundance_of>,
-        <https://w3id.org/biolink/vocab/affects_activity_of>,
-        <https://w3id.org/biolink/vocab/affects_degradation_of>,
-        <https://w3id.org/biolink/vocab/affects_expression_of>,
-        <https://w3id.org/biolink/vocab/affects_folding_of>,
-        <https://w3id.org/biolink/vocab/affects_localization_of>,
-        <https://w3id.org/biolink/vocab/affects_metabolic_processing_of>,
-        <https://w3id.org/biolink/vocab/affects_molecular_modification_of>,
-        <https://w3id.org/biolink/vocab/affects_mutation_rate_of>,
-        <https://w3id.org/biolink/vocab/affects_response_to>,
-        <https://w3id.org/biolink/vocab/affects_secretion_of>,
-        <https://w3id.org/biolink/vocab/affects_splicing_of>,
-        <https://w3id.org/biolink/vocab/affects_stability_of>,
-        <https://w3id.org/biolink/vocab/affects_synthesis_of>,
-        <https://w3id.org/biolink/vocab/affects_transport_of>,
-        <https://w3id.org/biolink/vocab/affects_uptake_of>,
-        <https://w3id.org/biolink/vocab/biomarker_for>,
-        <https://w3id.org/biolink/vocab/category>,
-        <https://w3id.org/biolink/vocab/correlated_with>,
-        <https://w3id.org/biolink/vocab/decreases_abundance_of>,
-        <https://w3id.org/biolink/vocab/decreases_activity_of>,
-        <https://w3id.org/biolink/vocab/decreases_degradation_of>,
-        <https://w3id.org/biolink/vocab/decreases_expression_of>,
-        <https://w3id.org/biolink/vocab/decreases_folding_of>,
-        <https://w3id.org/biolink/vocab/decreases_localization_of>,
-        <https://w3id.org/biolink/vocab/decreases_metabolic_processing_of>,
-        <https://w3id.org/biolink/vocab/decreases_molecular_modification_of>,
-        <https://w3id.org/biolink/vocab/decreases_mutation_rate_of>,
-        <https://w3id.org/biolink/vocab/decreases_response_to>,
-        <https://w3id.org/biolink/vocab/decreases_secretion_of>,
-        <https://w3id.org/biolink/vocab/decreases_splicing_of>,
-        <https://w3id.org/biolink/vocab/decreases_stability_of>,
-        <https://w3id.org/biolink/vocab/decreases_synthesis_of>,
-        <https://w3id.org/biolink/vocab/decreases_transport_of>,
-        <https://w3id.org/biolink/vocab/decreases_uptake_of>,
-        <https://w3id.org/biolink/vocab/description>,
-        <https://w3id.org/biolink/vocab/full_name>,
-        <https://w3id.org/biolink/vocab/has_phenotype>,
-        <https://w3id.org/biolink/vocab/id>,
-        <https://w3id.org/biolink/vocab/in_taxon>,
-        <https://w3id.org/biolink/vocab/increases_abundance_of>,
-        <https://w3id.org/biolink/vocab/increases_activity_of>,
-        <https://w3id.org/biolink/vocab/increases_degradation_of>,
-        <https://w3id.org/biolink/vocab/increases_expression_of>,
-        <https://w3id.org/biolink/vocab/increases_folding_of>,
-        <https://w3id.org/biolink/vocab/increases_localization_of>,
-        <https://w3id.org/biolink/vocab/increases_metabolic_processing_of>,
-        <https://w3id.org/biolink/vocab/increases_molecular_modification_of>,
-        <https://w3id.org/biolink/vocab/increases_mutation_rate_of>,
-        <https://w3id.org/biolink/vocab/increases_response_to>,
-        <https://w3id.org/biolink/vocab/increases_secretion_of>,
-        <https://w3id.org/biolink/vocab/increases_splicing_of>,
-        <https://w3id.org/biolink/vocab/increases_stability_of>,
-        <https://w3id.org/biolink/vocab/increases_synthesis_of>,
-        <https://w3id.org/biolink/vocab/increases_transport_of>,
-        <https://w3id.org/biolink/vocab/increases_uptake_of>,
-        <https://w3id.org/biolink/vocab/interacts_with>,
-        <https://w3id.org/biolink/vocab/iri>,
-        <https://w3id.org/biolink/vocab/molecularly_interacts_with>,
-        <https://w3id.org/biolink/vocab/name>,
-        <https://w3id.org/biolink/vocab/node_property>,
-        <https://w3id.org/biolink/vocab/regulates_entity_to_entity>,
-        <https://w3id.org/biolink/vocab/related_to>,
-        <https://w3id.org/biolink/vocab/synonym>,
-        <https://w3id.org/biolink/vocab/systematic_synonym> .
 
 <https://w3id.org/biolink/vocab/GeographicLocation> a meta:ClassDefinition ;
     skos:definition "a location that can be described in lat/long coordinates" ;
@@ -8527,12 +8453,13 @@
     skos:definition "an entity that can either be directly located on a genome (gene, transcript, exon, regulatory region) or is encoded in a genome (protein)" ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation SO:0000110,
+        GENO:0000897,
         <umlssc:T028>,
         <umlssc:T086>,
         <umlsst:gngm>,
         <umlsst:nusq> ;
     meta:class_uri <https://w3id.org/biolink/vocab/GenomicEntity> ;
-    meta:is_a <https://w3id.org/biolink/vocab/GenotypicEntity> ;
+    meta:is_a <https://w3id.org/biolink/vocab/MolecularEntity> ;
     meta:slots <https://w3id.org/biolink/vocab/affects_abundance_of>,
         <https://w3id.org/biolink/vocab/affects_activity_of>,
         <https://w3id.org/biolink/vocab/affects_degradation_of>,
