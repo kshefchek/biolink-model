@@ -4795,6 +4795,7 @@
     skos:definition "A gene product that is composed of a chain of amino acid sequences and is produced by ribosome-mediated translation of mRNA" ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation PR:000000001,
+        SO:0000104,
         SIO:010043,
         <umlssc:T087>,
         <umlssc:T116>,
