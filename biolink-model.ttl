@@ -1137,6 +1137,7 @@
 
 <https://w3id.org/biolink/vocab/EnvironmentalFeature> a meta:ClassDefinition ;
     rdfs:subClassOf ENVO:00002297 ;
+    skos:mappingRelation ENVO:01000254 ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     meta:class_uri <https://w3id.org/biolink/vocab/EnvironmentalFeature> ;
     meta:is_a <https://w3id.org/biolink/vocab/PlanetaryEntity> ;
@@ -1155,6 +1156,7 @@
 
 <https://w3id.org/biolink/vocab/EnvironmentalProcess> a meta:ClassDefinition ;
     rdfs:subClassOf ENVO:02500000 ;
+    skos:mappingRelation ENVO:02500000 ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     meta:class_uri <https://w3id.org/biolink/vocab/EnvironmentalProcess> ;
     meta:is_a <https://w3id.org/biolink/vocab/PlanetaryEntity> ;
@@ -7334,7 +7336,7 @@
         "exposure" ;
     skos:definition "A feature of the environment of an organism that influences one or more phenotypic features of that organism, potentially mediated by genes" ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
-    skos:mappingRelation SIO:000955 ;
+    skos:mappingRelation XCO:0000000 ;
     meta:class_uri <https://w3id.org/biolink/vocab/ExposureEvent> ;
     meta:is_a <https://w3id.org/biolink/vocab/BiologicalEntity> ;
     meta:slots <https://w3id.org/biolink/vocab/category>,
@@ -8213,6 +8215,7 @@
     skos:definition "A subcellular location, cell type or gross anatomical part" ;
     skos:inScheme <https://w3id.org/biolink/biolink-model> ;
     skos:mappingRelation SIO:010046,
+        UBERON:0001062,
         <umlssc:T022>,
         <umlssc:T029>,
         <umlssc:T030>,
